@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderWorld - Travel Blog</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid d-flex align-items-center">
+            <button class="btn1 me-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions">
+                <span class="icon">
+                    <svg viewBox="0 0 175 80" width="40" height="40">
+                        <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                        <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                        <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                    </svg>
+                </span>
+                <span class="text text-white">MENU</span>
+            </button>
+
+            <h2 class="navbar-title ms-auto">WanderWorld</h2>
+
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- 🔍 Search Box (Right end) -->
+            <div class="searchBox">
+                <input class="searchInput" type="text" name="" placeholder="Search">
+                <button class="searchButton" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                        <g clip-path="url(#clip0_2_17)">
+                            <g filter="url(#filter0_d_2_17)">
+                                <path
+                                    d="M23.7953 23.9182L19.0585 19.1814M19.0585 19.1814C19.8188 18.4211 20.4219 17.5185 20.8333 16.5251C21.2448 15.5318 21.4566 14.4671 21.4566 13.3919C21.4566 12.3167 21.2448 11.252 20.8333 10.2587C20.4219 9.2653 19.8188 8.36271 19.0585 7.60242C18.2982 6.84214 17.3956 6.23905 16.4022 5.82759C15.4089 5.41612 14.3442 5.20435 13.269 5.20435C12.1938 5.20435 11.1291 5.41612 10.1358 5.82759C9.1424 6.23905 8.23981 6.84214 7.47953 7.60242C5.94407 9.13789 5.08145 11.2204 5.08145 13.3919C5.08145 15.5634 5.94407 17.6459 7.47953 19.1814C9.01499 20.7168 11.0975 21.5794 13.269 21.5794C15.4405 21.5794 17.523 20.7168 19.0585 19.1814Z"
+                                    stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                    shape-rendering="crispEdges"></path>
+                            </g>
+                        </g>
+                        <defs>
+                            <filter id="filter0_d_2_17" x="-0.418549" y="3.70435" width="29.7139" height="29.7139"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
+                                </feColorMatrix>
+                                <feOffset dy="4"></feOffset>
+                                <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                                <feComposite in2="hardAlpha" operator="out"></feComposite>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0">
+                                </feColorMatrix>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_17">
+                                </feBlend>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_17" result="shape">
+                                </feBlend>
+                            </filter>
+                            <clipPath id="clip0_2_17">
+                                <rect width="28.0702" height="28.0702" fill="white"
+                                    transform="translate(0.403503 0.526367)">
+                                </rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasLabel">
+
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLabel">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#blog">Blogs</a></li>
+                <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home" class="mb-5">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./Images/banner1.jpg" class="d-block w-100" alt="..." width="100%" height="730px">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Explore the World</h5>
+                        <p>Join us on unforgettable adventures</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <video src="./Images/banner2.mp4" class="d-block w-100" alt="..." autoplay muted loop playsinline
+                        style="height: 730px; object-fit: cover;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Discover Hidden Gems</h5>
+                            <p>From mountains to markets</p>
+                        </div>
+                </div>
+                <div class="carousel-item">
+                    <video src="./Images/banner3.mp4" class="d-block w-100" alt="..." autoplay muted loop playsinline
+                        style="height: 730px; object-fit: cover;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Discover Hidden Gems</h5>
+                            <p>From mountains to markets</p>
+                        </div>
+                </div>
+                <div class="carousel-item">
+                    <video src="./Images/banner.mp4" class="d-block w-100" alt="..." autoplay muted loop playsinline
+                        style="height: 730px; object-fit: cover;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Discover Hidden Gems</h5>
+                            <p>From mountains to markets</p>
+                        </div>
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+    <!-- Blog Section -->
+    <section id="blog" class="container">
+        <h2 class="mb-4">Latest Travel Posts</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./Images/kerala.jpg" alt="" width="100%" height="250px">
+                    <div class="card-body">
+                        <h5 class="card-title">Kerala Backwaters</h5>
+                        <p class="card-text">By Jodie Foster | July 10, 2025</p>
+                        <p>Float through palm-lined canals and lush landscapes in Kerala, India...</p>
+                        <a href="./kerala-blog.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./Images/kyoto.jpg" alt="" width="100%" height="250px">
+                    <div class="card-body">
+                        <h5 class="card-title">Kyoto Temples</h5>
+                        <p class="card-text">By Sean Parker | August 30, 2025</p>
+                        <p>Discover the spiritual heart of Japan, where ancient temples and cherry blossoms greet you..
+                        </p>
+                        <a href="./kyoto-blog.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./Images/beach.jpg" alt="" width="100%" height="250px">
+                    <div class="card-body">
+                        <h5 class="card-title">Maui, Hawaii</h5>
+                        <p class="card-text">By Elena Whittaker | January 01, 2025</p>
+                        <p>Unwind on golden beaches and explore the lush volcanic beauty of Hawaii’s island paradise.
+                        </p>
+                        <a href="./kerala-blog.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./Images/athens.jpg" alt="" width="100%" height="250px">
+                    <div class="card-body">
+                        <h5 class="card-title"> Athens, Greece</h5>
+                        <p class="card-text">By Jane Matt | March 07, 2025</p>
+                        <p>Step back in time as you explore ruins of Western civilization's cradle and the mighty
+                            Parthenon</p>
+                        <a href="./kerala-blog.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./Images/alps.jpg" alt="" width="100%" height="250px">
+                    <div class="card-body">
+                        <h5 class="card-title"> Swiss Alps, Switzerland</h5>
+                        <p class="card-text">By Cercei Lan | October 14, 2025</p>
+                        <p>Breathe in crisp mountain air as you ski, hike, and paraglide through stunning alpine
+                            landscapes.</p>
+                        <a href="./kerala-blog.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./Images/amazon.jpg" alt="" width="100%" height="250px">
+                    <div class="card-body">
+                        <h5 class="card-title"> Amazon Rainforest, Brazil</h5>
+                        <p class="card-text">By Arya Stark | December 31, 2025</p>
+                        <p>Delve into the world’s largest rainforest.
+                        <p>
+                            <a href="./kerala-blog.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="container my-5">
+        <h2>Explore Destinations</h2>
+
+        <!-- Europe -->
+        <div class="container my-5">
+            <div class="accordion" id="continentAccordion1">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="europeHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#europeCollapse" aria-expanded="false" aria-controls="europeCollapse">
+                            🌍 Europe
+                        </button>
+                    </h2>
+                    <div id="europeCollapse" class="accordion-collapse collapse" aria-labelledby="europeHeading"
+                        data-bs-parent="#continentAccordion">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100">
+                                        <img src="./Images/italy.jpg" height="300px" class="card-img-top" alt="Italy">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Italy</h5>
+                                            <p class="card-text">Venice canals, Rome ruins, Amalfi Coast beauty.</p>
+                                            <a href="#" class="btn btn-outline-primary">View Posts</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100">
+                                        <img src="./Images/paris.jpg" height="300px" class="card-img-top" alt="France">
+                                        <div class="card-body">
+                                            <h5 class="card-title">France</h5>
+                                            <p class="card-text">Paris charm, Provence fields, Riviera coast.</p>
+                                            <a href="#" class="btn btn-outline-primary">View Posts</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100">
+                                        <img src="./Images/greece.jpg" height="300px" class="card-img-top" alt="Greece">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Greece</h5>
+                                            <p class="card-text">Ancient ruins, island sunsets, Aegean views.</p>
+                                            <a href="#" class="btn btn-outline-primary">View Posts</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Asia -->
+        <div class="container my-5">
+            <div class="accordion" id="continentAccordion2">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="asiaHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#asiaCollapse" aria-expanded="false" aria-controls="asiaCollapse">
+                            🌏 Asia
+                        </button>
+                    </h2>
+                    <div id="asiaCollapse" class="accordion-collapse collapse" aria-labelledby="asiaHeading"
+                        data-bs-parent="#continentAccordion">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100">
+                                        <img src="./Images/kyoto.jpg" height="300px" class="card-img-top" alt="Kyoto">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Kyoto, Japan</h5>
+                                            <p class="card-text">Temples, teahouses, and cherry blossoms.</p>
+                                            <a href="#" class="btn btn-outline-primary">View Posts</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100">
+                                        <img src="./Images/jordan.jpg" height="300px" class="card-img-top" alt="Petra">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Petra, Jordan</h5>
+                                            <p class="card-text">Rose-red ruins of the Lost City.</p>
+                                            <a href="#" class="btn btn-outline-primary">View Posts</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100">
+                                        <img src="./Images/bali.jpg" height="300px" class="card-img-top" alt="Bali">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Bali, Indonesia</h5>
+                                            <p class="card-text">Temples, beaches, and rice terraces.</p>
+                                            <a href="#" class="btn btn-outline-primary">View Posts</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Africa -->
+        <div class="container my-5">
+            <div class="accordion" id="continentAccordion3">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="africaHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#africaCollapse" aria-expanded="false" aria-controls="africaCollapse">
+                            🌍 Africa
+                        </button>
+                    </h2>
+                    <div id="africaCollapse" class="accordion-collapse collapse" aria-labelledby="africaHeading"
+                        data-bs-parent="#continentAccordion">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100">
+                                        <img src="./Images/capetown.jpg" height="300px" class="card-img-top"
+                                            alt="Cape Town">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Cape Town, South Africa</h5>
+                                            <p class="card-text">Mountains, beaches, and vineyards.</p>
+                                            <a href="#" class="btn btn-outline-primary">View Posts</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100">
+                                        <img src="./Images/morocco.jpg" height="300px" class="card-img-top"
+                                            alt="Marrakech">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Marrakech, Morocco</h5>
+                                            <p class="card-text">Markets, palaces, and spice scents.</p>
+                                            <a href="#" class="btn btn-outline-primary">View Posts</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100">
+                                        <img src="./Images/tanzania.jpg" height="300px" class="card-img-top"
+                                            alt="Serengeti">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Serengeti, Tanzania</h5>
+                                            <p class="card-text">Wildlife, migration, and safaris.</p>
+                                            <a href="#" class="btn btn-outline-primary">View Posts</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- South America -->
+        <div class="container my-5">
+            <div class="accordion" id="continentAccordion4">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="samericaHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#samericaCollapse" aria-expanded="false" aria-controls="samericaCollapse">
+                            🌎 South America
+                        </button>
+                    </h2>
+                    <div id="samericaCollapse" class="accordion-collapse collapse" aria-labelledby="samericaHeading"
+                        data-bs-parent="#continentAccordion">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100">
+                                        <img src="./Images/peru.jpg" height="300px" class="card-img-top"
+                                            alt="Machu Picchu">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Machu Picchu, Peru</h5>
+                                            <p class="card-text">Incan ruins in stunning mountains.</p>
+                                            <a href="#" class="btn btn-outline-primary">View Posts</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100">
+                                        <img src="./Images/brazil.jpg" height="300px" class="card-img-top" alt="Rio">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Rio de Janeiro, Brazil</h5>
+                                            <p class="card-text">Statues, samba, and beaches.</p>
+                                            <a href="#" class="btn btn-outline-primary">View Posts</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100">
+                                        <img src="./Images/argentina.jpg" height="300px" class="card-img-top"
+                                            alt="Patagonia">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Patagonia, Argentina/Chile</h5>
+                                            <p class="card-text">Glaciers, peaks, and wilderness.</p>
+                                            <a href="#" class="btn btn-outline-primary">View Posts</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container my-5">
+        <h2>About Us</h2>
+        <img src="./Images/team.jpg" class="img-fluid rounded mt-3" alt="Our Team">
+        <p>Welcome to WanderWorld — a travel blog crafted by five friends brought together by a shared love for
+            exploration, storytelling, and adventure.
+
+            We’re Tyrion, John, Arya, Sansa, and Robb — a close-knit group of explorers who believe that the best
+            stories are found off the beaten path. What began as a spontaneous trip years ago quickly turned into a
+            passion for discovering new places, meeting new people, and collecting memories that last a lifetime.
+
+            WanderWorld is our way of capturing those moments and sharing them with fellow wanderers. Through
+            detailed
+            travel guides, personal reflections, hidden gems, and honest tips, we hope to inspire others to embrace
+            the
+            spirit of travel — not just as tourists, but as curious souls eager to connect with the world.
+
+            We're not globe-trotters by profession, but we’ve learned that meaningful travel isn’t about how far you
+            go
+            — it’s about how deeply you experience each journey. Whether you're planning your first trip or your
+            fiftieth, we invite you to explore the world with us, one story at a time.
+
+            Let the journey begin — and welcome to WanderWorld.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="form-card1">
+            <div class="form-card2">
+                <form class="form">
+                    <p class="form-heading">Get In Touch</p>
+
+                    <div class="form-field">
+                        <input required="" placeholder="Name" class="input-field" type="text" />
+                    </div>
+
+                    <div class="form-field">
+                        <input required="" placeholder="Email" class="input-field" type="email" />
+                    </div>
+
+                    <div class="form-field">
+                        <input required="" placeholder="Subject" class="input-field" type="text" />
+                    </div>
+
+                    <div class="form-field">
+                        <textarea required="" placeholder="Message" cols="30" rows="3" class="input-field"></textarea>
+                    </div>
+
+                    <button class="sendMessage-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer_main" id="Contact">
+
+
+            <nav class="navbar-light">
+                <h5>Subscribe for our Newsletter: </h5>
+                <div class="container-fluid">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Email Address" aria-label="Search">
+                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            type="submit">SignUp</button>
+
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Newsletter</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h4>Thank You for Signing Up</h4>
+                                        <h5>Download Newsletter:</h5>
+                                        <!-- <a href="./4519348.jpg" target="_blank">
+                                                    <button class="btn btn-outline-danger" type="file" download>Downlaod</button>
+                                                    </a> -->
+                                        <a href="./4519348.jpg" target="_blank" download
+                                            class="btn btn-outline-danger">Download</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+
+            <div class="footer_tag">
+                <h2>Address</h2>
+                <p>8164 W 3rd St, Los Angeles, CA 90048, United States</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Quick Links</h2>
+                <a href="#home">
+                    <p>Home</p>
+                </a>
+                <a href="#blog">
+                    <p>Blog</p>
+                </a>
+                <a href="#destinations">
+                    <p>Destinations</p>
+                </a>
+                <a href="#about">
+                    <p>About</p>
+                </a>
+                <a href="#contact">
+                    <p>Contact</p>
+                </a>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Contact</h2>
+                <p>+94 12 3456 789</p>
+                <p>+94 25 5568456</p>
+                <p>www.wanderwolrd.com</p>
+                <p>wanderworld@travel.org</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Follow</h2>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+
+
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
